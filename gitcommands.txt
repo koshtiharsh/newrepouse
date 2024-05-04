@@ -1,0 +1,517 @@
+dmin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/Admin/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit/.git/
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git add .
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Screenshot 2024-05-04 114754.png
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git commit -m 'initial commit'
+[master (root-commit) e9f2d3e] initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Screenshot 2024-05-04 114754.png
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ touch index.js
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git -A
+unknown option: -A
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git add -A
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.js
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git log
+commit e9f2d3e9a950ca0ba3f588e4c81a7e896c6e90a9 (HEAD -> master)
+Author: Harsh <harsh.koshti04@gmail.com>
+Date:   Sat May 4 12:00:44 2024 +0530
+
+    initial commit
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git log -p -1
+commit e9f2d3e9a950ca0ba3f588e4c81a7e896c6e90a9 (HEAD -> master)
+Author: Harsh <harsh.koshti04@gmail.com>
+Date:   Sat May 4 12:00:44 2024 +0530
+
+    initial commit
+
+diff --git a/Screenshot 2024-05-04 114754.png b/Screenshot 2024-05-04 114754.png
+new file mode 100644
+index 0000000..2822d35
+Binary files /dev/null and b/Screenshot 2024-05-04 114754.png differ
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git branch
+* master
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git branch my
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git branch
+* master
+  my
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git checkout my
+Switched to branch 'my'
+A       index.js
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git status
+On branch my
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.js
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git status -s
+A  index.js
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git add .
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git status
+On branch my
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.js
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git checkout index.js
+Updated 0 paths from the index
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git status
+On branch my
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.js
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git status
+On branch my
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.js
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   index.js
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git checkout index.js
+Updated 1 path from the index
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ touch newfile.html
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git checkout master
+Switched to branch 'master'
+A       index.js
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.js
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.html
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git checkout master
+Already on 'master'
+A       index.js
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ls
+'Screenshot 2024-05-04 114754.png'   index.js   newfile.html
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$git checkout my
+git: 'heckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git checkout master
+Already on 'master'
+A       index.js
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git checkout my
+Switched to branch 'my'
+A       index.js
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git add .
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git status
+On branch my
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   index.js
+        new file:   newfile.html
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git checkout master
+Switched to branch 'master'
+A       index.js
+A       newfile.html
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git heckout my
+git: 'heckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git checkout my
+Switched to branch 'my'
+A       index.js
+A       newfile.html
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git commit -m 'new '
+[my edb8114] new
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.js
+ create mode 100644 newfile.html
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git status
+On branch my
+nothing to commit, working tree clean
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (my)
+$ git checkout master
+Switched to branch 'master'
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git remote -v
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ sssh-keygen -t ed25519 -C "harsh.koshti04@gmail.com"
+bash: $'\302\226ssh-keygen': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$  ssh-keygen -t rsa -b 4096 -C "harsh.koshti04@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Admin/.ssh/id_rsa):
+Created directory '/c/Users/Admin/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Admin/.ssh/id_rsa
+Your public key has been saved in /c/Users/Admin/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:OgJTQ+wKTU07OKCS7GVJYsQSwql3fZB5wWguIIjne9Q harsh.koshti04@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|X=.=o  =..       |
+|X**o+.* o        |
+|*Bo*== o         |
+|= *o=oE .        |
+| +o= . .S        |
+|  oo.  .         |
+|   .. o          |
+|     . .         |
+|                 |
++----[SHA256]-----+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ eval $(ssh-agent -s)
+Agent pid 583
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh add ~/.ssh/id_rsa
+ssh: Could not resolve hostname add: Name or service not known
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ssh add   /c/Users/Admin/.ssh/id_rsa.pub
+ssh: Could not resolve hostname add: Name or service not known
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh add  /c/Users/Admin/.ssh/583.pub
+ssh: Could not resolve hostname add: Name or service not known
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-add  /c/Users/Admin/.ssh/583.pub
+/c/Users/Admin/.ssh/583.pub: No such file or directory
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/Admin/.ssh/id_rsa (harsh.koshti04@gmail.com)
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ cat ~/.ssh/id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+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
+-----END OPENSSH PRIVATE KEY-----
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-kssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+bash: $'\302\203\302\203\302\203\302\203\302\226ssh-keygen': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+bash: $'\302\203\302\226ssh-keygen': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-keygen -y -f ~/.ssh/id_rsa > ~/.ssh/id_rsa.pub
+bash: $'\302\203\302\226ssh-keygen': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git remote add origin git@github.com:koshtiharsh/testgit.git
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git remote -v
+origin  git@github.com:koshtiharsh/testgit.git (fetch)
+origin  git@github.com:koshtiharsh/testgit.git (push)
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git push main origin
+error: src refspec origin does not match any
+error: failed to push some refs to 'main'
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git push master origin
+error: src refspec origin does not match any
+error: failed to push some refs to 'master'
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-keygen -t ed25519 -C 'harsh.koshti04@gmail.com'
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/c/Users/Admin/.ssh/id_ed25519):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Admin/.ssh/id_ed25519
+Your public key has been saved in /c/Users/Admin/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:vhVwp0N2dVjBfTWJoOe1CS3zch4Lr019kgH5K77FP4Y harsh.koshti04@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|           .. +=O|
+|          . .+.++|
+|        ..+==o  .|
+|         =o+*oo  |
+|        S ++ *o  |
+|       .   o*.++ |
+|        . . .=B..|
+|         o .+E =.|
+|        .  .oo. o|
++----[SHA256]-----+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ clip < ~/.ssh/id_ed25519.pub
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git remote set-url origin 
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$
+
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git remote set-url origin ggit@github.com:koshtiharsh/testgit.git
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git push -u origin master
+The authenticity of host 'github.com (20.207.73.82)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+\302\226git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git remote set-url origin git@github.com:koshtiharsh/testgit.git
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git push -u origin master
+\302\226git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ sssh-add ~/.ssh/id_rsa
+bash: $'\302\203ssh-add': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-add ~/.ssh/id_rsa
+bash: $'\302\203ssh-add': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ sssh-add ~/.sa
+bash: $'\302\203ssh-add': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-add ~/.id_rsa
+bash: $'\302\203ssh-add': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ eval $(ssh-agent -s)
+Agent pid 743
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-add ~/.ssh/id_rsa
+bash: $'\302\203ssh-add': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ sssh-add ~/.ssh/id_rsa
+bash: $'\302\203ssh-add': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/Admin/.ssh/id_rsa (harsh.koshti04@gmail.com)
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ssh-add ~/.ssh/id_rsa
+Identity added: /c/Users/Admin/.ssh/id_rsa (harsh.koshti04@gmail.com)
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git remote set-url origin git@github.com:koshtiharsh/testgit.git
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git push -u origin master
+\302\226git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ ggit remote set-url origin git@github.com:koshtiharsh/testgit.git
+bash: $'\302\203git': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git remote set-url origin git@github.com:koshtiharsh/testgit.git
+bash: $'\302\203git': command not found
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$git remote set-url origin git@github.com:koshtiharsh/testgit.git
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 138.92 KiB | 756.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/koshtiharsh/testgit/pull/new/master
+remote:
+To github.com:koshtiharsh/testgit.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+Admin@HARSHPC MINGW64 ~/OneDrive/Documents/Desktop/Programs/Sem 5/sem6/cs_practicals/wadgit (master)
